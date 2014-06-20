@@ -1,0 +1,21 @@
+diff -ur sdcc-3.1.0-org/device/lib/Makefile.in sdcc-3.1.0-modified/device/lib/Makefile.in
+--- sdcc-3.1.0-org/device/lib/Makefile.in	2011-11-01 11:35:46.000000000 -0500
++++ sdcc-3.1.0-modified/device/lib/Makefile.in	2013-12-27 13:58:50.000000000 -0600
+@@ -166,7 +166,7 @@
+ endif
+ 
+ ifeq ($(OPT_DISABLE_MCS51), 0)
+-TARGETS        += models small-mcs51-stack-auto
++TARGETS        += models model-mcs51-stack-auto
+ endif
+ 
+ ifeq ($(OPT_DISABLE_PIC14), 0)
+diff -ur sdcc-3.1.0-org/device/lib/incl.mk sdcc-3.1.0-modified/device/lib/incl.mk
+--- sdcc-3.1.0-org/device/lib/incl.mk	2011-07-09 12:55:55.000000000 -0500
++++ sdcc-3.1.0-modified/device/lib/incl.mk	2013-12-27 13:58:29.000000000 -0600
+@@ -96,4 +96,4 @@
+   assert.c \
+   time.c
+ 
+-MODELS = small medium large
++MODELS = small medium large huge
