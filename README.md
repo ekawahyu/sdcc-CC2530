@@ -12,7 +12,7 @@ Cross compile SDCC on OS X
 
 Tested SDCC version to build
 ============================
-SDCC-3.1.0, SDCC-3.3.0, SDCC-3.4.0, SDCC-3.5.0, SDCC-3.6.0
+SDCC-3.1.0, SDCC-3.3.0, SDCC-3.4.0, SDCC-3.5.0, SDCC-3.6.0, SDCC-3.9.0
 
 Added script to build on OS X local directory
 =============================================
