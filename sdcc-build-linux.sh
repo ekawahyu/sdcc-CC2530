@@ -24,11 +24,13 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
+set -e
+
 #
 # Distribution archive name (without the chunk suffix)
 #
-distribution_ver=3.6.0
-distribution_patch=sdcc-3.6.0-model-stack-auto.patch
+distribution_ver=3.9.0
+distribution_patch=sdcc-3.9.0-model-stack-auto.patch
 
 #
 # Establish the location of the distribution archives and make a working
@@ -58,7 +60,7 @@ fi
 # Unpack the distribution
 #
 echo "Unpacking distribution archive..."
-tar -xjf sdcc-src-$distribution_ver.tar.bz2
+tar xjf sdcc-src-$distribution_ver.tar.bz2
 
 #
 # Removing version numbering from SDCC directory
@@ -75,7 +77,7 @@ cd sdcc
 patch -p 1 < $distribution_patch
 
 #
-# Building SDCC for Mac OSX
+# Building SDCC for Linux
 #
 echo "Building SDCC for Linux..."
 mkdir $base_dir/linux

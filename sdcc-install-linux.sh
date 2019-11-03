@@ -60,7 +60,7 @@ fi
 # Unpack the distribution
 #
 echo "Unpacking distribution archive..."
-tar xzU -f sdcc-src-$distribution_ver.tar.bz2
+tar xjf sdcc-src-$distribution_ver.tar.bz2
 
 #
 # Removing version numbering from SDCC directory
@@ -77,19 +77,18 @@ cd sdcc
 patch -p 1 < $distribution_patch
 
 #
-# Building SDCC for Mac OSX
+# Building SDCC for Linux
 #
-echo "Building SDCC for Mac OSX..."
-mkdir $base_dir/osx
+echo "Installing SDCC for Mac OSX..."
 
 ./configure \
---prefix="$base_dir/osx" \
+--prefix="/usr/local" \
 --disable-z80-port --disable-z180-port --disable-r2k-port --disable-r3ka-port \
 --disable-gbz80-port --disable-ds390-port --disable-ds400-port --disable-pic14-port \
 --disable-pic16-port --disable-hc08-port --disable-s08-port
 
 make
-make install
+sudo make install
 make distclean
 
 #
